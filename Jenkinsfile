@@ -29,22 +29,23 @@ pipeline{
    stage("Artifact upload"){
     steps{
         script{
-      nexusArtifactUploader artifacts: 
-      [
+     nexusArtifactUploader artifacts: 
+     [
         [
-            artifactId: '01-maven-web-app',
-             classifier: '', 
-             file: 'target/01-maven-web-app.war',
-              type: 'war'
-              ]
-              ],
-               credentialsId: 'nexus',
-               groupId: 'in.ashokit',
-               nexusUrl: 'http://34.118.132.107:8081/', 
-               nexusVersion: 'nexus3', 
-               protocol: 'http', 
-               repository: 'java_application', 
-               version: '1.0-SNAPSHOT'
+            artifactId: '01-maven-web-app', 
+            classifier: '', 
+            file: 'target/01-maven-web-app.war', 
+            type: 'war'
+            ]
+            ], 
+            credentialsId: 'nexus', 
+            groupId: 'in.ashokit', 
+            nexusUrl: 'http://34.118.132.107:8081/', 
+            nexusVersion: 'nexus2', 
+            protocol: 'http', 
+            repository: 'java_webapplication', 
+            version: '1.0-SNAPSHOT'
+      
     }
    }
    }
