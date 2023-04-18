@@ -32,8 +32,5 @@ pipeline{
      nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'nexus', groupId: 'in.ashokit', nexusUrl: 'http://34.118.132.107:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'java-application', version: '1.0-SNAPSHOT'
    }
    }
-
-
-   git 
     }
    } 
