@@ -19,10 +19,12 @@ pipeline{
     }
    stage("code review"){
     steps{
+        script{
         withSonarQubeEnv(credentialsId: 'sonar') {
       sh 'mvn clean package sonar:sonar'
                 }
     }
+   }
    }
 
 
