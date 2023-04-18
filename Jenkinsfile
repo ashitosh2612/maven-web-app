@@ -26,6 +26,28 @@ pipeline{
     }
    }
    }
+   stage("Artifact upload"){
+    steps{
+        script{
+      nexusArtifactUploader artifacts: 
+      [
+        [
+            artifactId: 'java_application',
+             classifier: '', 
+             file: 'target/01-maven-web-app.war',
+              type: 'war'
+              ]
+              ],
+               credentialsId: 'nexus',
+               groupId: 'in.ashokit',
+               nexusUrl: 'http://34.118.132.107:8081/', 
+               nexusVersion: 'nexus3', 
+               protocol: 'http', 
+               repository: 'java_application', 
+               version: '1.0-SNAPSHOT'
+    }
+   }
+   }
 
 
    
