@@ -40,7 +40,7 @@ pipeline{
             ], 
             credentialsId: 'nexus', 
             groupId: 'in.ashokit', 
-            nexusUrl: 'http://34.118.132.107:8081/', 
+            nexusUrl: '34.118.132.107:8081', 
             nexusVersion: 'nexus2', 
             protocol: 'http', 
             repository: 'java_webapplication', 
