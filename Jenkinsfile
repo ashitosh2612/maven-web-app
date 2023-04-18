@@ -28,7 +28,7 @@ pipeline{
    }
    stage("Artifact upload"){
     steps{
-        script{
+       
      nexusArtifactUploader artifacts: 
      [
         [
@@ -46,7 +46,7 @@ pipeline{
             repository: 'java_webapplication', 
             version: '1.0-SNAPSHOT'
       
-    }
+    
    }
    }
 
