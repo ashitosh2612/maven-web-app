@@ -44,5 +44,12 @@ pipeline{
         version: '1.0-SNAPSHOT'
    }
    }
+stage("code Deploy"){
+    steps{
+        sh 'sudo cp target/ *.war  /opt/tomcat/webapps/'
+    }
+
+}
+
     }
    } 
