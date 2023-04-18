@@ -43,7 +43,7 @@ pipeline{
             nexusUrl: '34.118.132.107:8081', 
             nexusVersion: 'nexus2', 
             protocol: 'http', 
-            repository: 'java_webapplication', 
+            repository: 'java-application', 
             version: '1.0-SNAPSHOT'
       
     
@@ -53,4 +53,4 @@ pipeline{
 
    
     }
-   }
+   } 
