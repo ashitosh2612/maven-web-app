@@ -9,7 +9,7 @@ pipeline{
             }
             
         }
-    }
+    
     stage("maven build"){
         steps{
             sh """
@@ -18,4 +18,8 @@ pipeline{
         }
     }
    
-}
+
+
+   
+    }
+   }
